@@ -1,0 +1,22 @@
+.video{
+    position: relative !important;
+   
+}
+
+.image{
+    height:150px;
+    width:180px;
+    margin-top: 270px;
+  
+    /* margin-top: 200px; */
+    position: absolute; 
+    background-color: #fec400;
+}
+
+.lStart{
+
+    left: 10px;
+}
+.lEnd{
+    right: 10px;
+}

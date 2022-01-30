@@ -1,0 +1,134 @@
+/* You can add global styles to this file, and also import other style files */
+
+.centerAlign {
+    text-align: center;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+    align-items: center;
+}
+
+.center-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.tL1 {
+    font-size: 400%;
+    line-height: 95%;
+}
+
+.tL2 {
+    font-size: 280%;
+    line-height: 95%;
+}
+
+.tL3 {
+    font-size: 180%;
+    line-height: 95%;
+}
+
+.tL4 {
+    font-size: 150%;
+}
+
+.tL5 {
+    font-size: 120%;
+}
+
+.buttonP {
+    padding: 5px 25px !important;
+}
+
+.mainLimit {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.body-orange {
+    background-color: #fec400;
+    padding: 7vh 10vh;
+}
+
+.body-white {
+    background-color: white;
+    padding: 8vh 10vh;
+}
+
+.body-gray {
+    background-color: #303030;
+    padding: 8vh 10vh;
+}
+
+.image-pub {
+    width: 350px;
+    height: auto;
+}
+
+.sec {
+    margin-top: 25px;
+}
+
+.light-button {
+    background-color: #ffffff00;
+    color: #fcf1c7;
+    border: 1.5px solid rgb(255, 255, 255) !important;
+}
+
+.colorWhite {
+    color: white;
+}
+
+.colorBlack {
+    color: black;
+}
+
+.colorWhite2 {
+    color: #fcf1c7;
+}
+
+.colorBlueOcean {
+    color: #00c0cb;
+}
+
+.mainC {
+    width: 300px;
+}
+
+.imageC {
+    width: 290px;
+    height: 310px;
+}
+
+table.mat-table {
+    display: table;
+}
+
+.width-100 {
+    width: 100%;
+}

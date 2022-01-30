@@ -1,0 +1,22 @@
+table {
+    width: 100% !important;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+    background: #777;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+    background: #efefef;
+}
+
+.expandable-row {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    background-color: #fafafa;
+    min-height: 0;
+    overflow: hidden;
+}
+
+th {
+    font-size: 50px;
+}

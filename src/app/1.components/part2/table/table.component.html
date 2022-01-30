@@ -1,0 +1,62 @@
+<table mat-table [dataSource]="dataS" class="mat-elevation-z8" matSort multiTemplateDataRows>
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+
+    <ng-container *ngFor="let it of headerTable">
+
+        <ng-container *ngIf="it.displayed == 'type' ">
+            <ng-container [matColumnDef]="it.displayed">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>
+                    <p class="tL4" style="margin-top: 10px;"> {{ (it.isName)? getTitle(it.name):it.name}} </p>
+                </mat-header-cell>
+                <mat-cell *matCellDef="let element;  columns: displayedColumns; let i = dataIndex;">
+
+                    <mat-icon *ngIf="element.data && element.data.length>0 && !element.isExpanded" (click)="changeState(i)" style="cursor: pointer;">expand_more</mat-icon>
+                    <mat-icon *ngIf="element.data && element.data.length>0 && element.isExpanded" (click)="changeState(i)" style="cursor: pointer;">expand_less</mat-icon>
+
+                    {{element[it.displayed]}} </mat-cell>
+            </ng-container>
+        </ng-container>
+
+        <ng-container *ngIf="it.displayed != 'type' ">
+            <ng-container [matColumnDef]="it.displayed">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>
+                    <p class="tL4" style="margin-top: 10px;"> {{ (it.isName)? getTitle(it.name):it.name}} </p>
+                </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element[it.displayed]}} </mat-cell>
+            </ng-container>
+        </ng-container>
+
+
+
+
+    </ng-container>
+
+    <ng-container matColumnDef="expandedDetail">
+        <mat-cell *matCellDef="let element" [@expandableRow]="element.isExpanded? 'expanded' : 'collapsed'">
+
+
+
+            <ng-container *ngIf="element.isExpanded && element.data && element.data.length>0">
+                <div class="width-100" style="margin-top: 20px;">
+                    <app-table [headerTable]="headerTable" [dataTable]="element.data"></app-table>
+                </div>
+
+            </ng-container>
+
+
+        </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    <mat-row class="expandable-row" *matRowDef="let row; columns: ['expandedDetail']"></mat-row>
+
+
+</table>
+<br>
+<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Seleccione paginación"></mat-paginator>

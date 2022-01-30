@@ -1,0 +1,23 @@
+<div class="mainC">
+    <img class="imageC" [src]="data.image" style="border: outset 1px white;">
+    <br>
+    <br>
+    <ng-container *ngIf="data.type==1">
+
+        <p class="tL3" style="text-align: center; font-weight: 500;" [ngClass]="{'colorWhite': typeColor==2, 'colorBlack':typeColor!=2}">{{data.title}}</p>
+        <p class="tL4" style="text-align: center;" [ngClass]="{'colorWhite2': typeColor==2, 'colorBlack':typeColor!=2}">{{data.description}}</p>
+    </ng-container>
+    <ng-container *ngIf="data.type==2">
+        <p class="tL3" style="text-align: center; font-weight: bold; " [ngClass]="{'colorWhite2': typeColor==2, 'colorBlack':typeColor!=2}"> <label style="text-decoration: line-through;">&nbsp; ${{data.priceBefore}}&nbsp;&nbsp;</label> &nbsp; ${{data.priceNow}} </p>
+
+        <div style="text-align: center;">
+            <button mat-raised-button class="tL4  buttonR" style="background-color: #00c0cb; color: white;">Buy Now</button>
+        </div>
+
+
+    </ng-container>
+
+    <br>
+
+
+</div>

@@ -1,0 +1,41 @@
+<div class="row mainLimit" style="padding: 5vh 0vh;">
+
+    <div class="col-12 col-md-6 "
+        [ngClass]="{'order-2': data.type==2 }"
+        style="padding-right: 10px;" [ngStyle]="{'text-align': (data.type==2)?'right':'left'}">
+
+        <p class="tL2" style="color: black; font-weight: 500;">{{ data.title }}</p>
+        <br>
+        <p class="tL3" style="color:rgb(48, 48, 48)">{{data.description}}
+        </p>
+
+        <section class="sec">
+            <button mat-raised-button class="tL4 buttonP" style="background-color: #fec400; color: white;">{{data.titleButton}}</button>
+
+        </section>
+        <br>
+    </div>
+    <div class="col-12 col-md-6" [ngClass]="{'order-1': data.type==2  } "
+        [ngStyle]="{'text-align': (data.type==2)?'right':'left'}">
+
+        <div style="position: relative;">
+            <div>
+                <h1 class="image" [ngClass]="{'lStart': data.type==1, 'lEnd': data.type==2}" >
+                </h1>
+            </div>
+
+            <div class="video"
+                [ngStyle]="{'margin-left': (data.type==1)?'40px':'0px', 'margin-right': (data.type==2)?'40px':'0px' }">
+                <iframe width="400" height="400" [src]="data.safeUrl" frameborder="0" allowfullscree>
+                </iframe>
+            </div>
+
+
+
+        </div>
+
+        <br>
+        <br>
+    </div>
+
+</div>

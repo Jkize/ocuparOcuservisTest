@@ -1,0 +1,33 @@
+mat-toolbar,
+mat-sidenav {
+    background-color: #eaae00;
+    color: #fcf1c7;
+}
+
+.spacer {
+    margin: 0 15px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.app-toolbar {
+    position: sticky;
+    position: -webkit-sticky;
+    /* For macOS/iOS Safari */
+    top: 0;
+    /* Sets the sticky toolbar to be on top */
+    z-index: 1000;
+    /* Ensure that your app's content doesn't overlap the toolbar */
+    /**Con esto evito que desaparezca el toolbar con el scroll view into**/
+}
+
+.sdContainer {
+    padding-bottom: 70px;
+}
+
+.img-custom {
+    max-height: 100px;
+    width: auto;
+}

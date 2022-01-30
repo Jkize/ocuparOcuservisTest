@@ -1,0 +1,51 @@
+<div class="mainLimit">
+
+    <p class="tL1" style="text-align: center; font-weight: 500;" [ngClass]="{'colorWhite': data.typeColor==2, 'colorBlack':data.typeColor!=2}"> {{data.title}}</p>
+    <br>
+    <p class="tL3" style="text-align: center;" [innerHTML]="data.description" [ngClass]="{'colorWhite2': data.typeColor==2, 'colorBlack':data.typeColor!=2}"></p>
+
+    <br>
+    <br>
+    <div class="row ">
+
+
+
+        <ng-container [ngSwitch]="data.type">
+
+            <ng-container *ngSwitchCase="1">
+
+                <div class="col-12 col-md-6 col-lg-4 center-grid" *ngFor="let dat of data.listDog">
+
+                    <app-dog-card [typeColor]="data.typeColor" [data]="dat"></app-dog-card>
+
+                </div>
+            </ng-container>
+
+            <ng-container *ngSwitchCase="2">
+
+                <div class="col-12 col-md-6 col-lg-4 center-grid" *ngFor="let dat of data.listVeterinaries">
+
+                    <app-veterinary-card [typeColor]="data.typeColor" [data]="dat"></app-veterinary-card>
+
+                </div>
+            </ng-container>
+
+            <ng-container *ngSwitchCase="3">
+
+                <div class="col-12 col-md-6 col-lg-4 center-grid" *ngFor="let dat of data.listVetrinaryNews">
+
+                    <app-news-card [data]="dat"></app-news-card>
+
+                </div>
+            </ng-container>
+
+
+        </ng-container>
+
+
+
+
+    </div>
+
+
+</div>

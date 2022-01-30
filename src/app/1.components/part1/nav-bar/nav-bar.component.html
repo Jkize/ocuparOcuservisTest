@@ -1,0 +1,49 @@
+<mat-toolbar style="height: 80px;">
+    <div style=" margin: 0 auto" fxShow [fxShow.sm]="false" [fxShow.xs]="false">
+
+        <img class="logo" src="/assets/logo.png" style="max-width: 50px; margin-left: 20px;">
+        <span class="spacer tL5" style="margin-right: 20px;">Fundación Lucesitas</span>
+
+
+        <span class="spacer tL5">Home</span>
+        <span class="spacer tL5">About</span>
+        <span class="spacer tL5">Service</span>
+        <span class="spacer tL5">Contact</span>
+
+
+
+        <mat-form-field class="example-full-width" appearance="fill" style="width: 200px; margin-left: 50px;">
+            <input type="email" matInput placeholder="Search">
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+
+    </div>
+
+    <div fxHide [fxHide.lt-md]="false" class="center-grid">
+
+        <button (click)="sidenav.toggle()" mat-button> <mat-icon style="font-size: 50px;">menu</mat-icon></button>
+    </div>
+
+</mat-toolbar>
+
+
+<mat-sidenav-container fxFlexFill class="example-container">
+    <mat-sidenav #sidenav fxLayout="column">
+        <div fxLayout="column" style="padding: 0 20px;">
+            <img class="logo" src="/assets/logo.png" style="max-width: 50px; margin: 20px auto;">
+            <p class="spacer tL4" style="margin-bottom: 10px;">Home</p>
+            <p class="spacer tL4" style="margin-bottom: 10px;">About</p>
+            <p class="spacer tL4" style="margin-bottom: 10px;">Service</p>
+            <p class="spacer tL4" style="margin-bottom: 10px;">Contact</p>
+
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill class="sdContainer">
+
+        <app-part1></app-part1>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<div class="body-gray">
+    <app-footer></app-footer>
+</div>
